@@ -1,0 +1,39 @@
+.sidenav-container {
+  height: 100%;
+}
+.mat-toolbar{
+  background-color:rgb(235, 192, 224);
+  color: rgb(83, 61, 78);
+  font-family: Calibri;
+  font-size: 1.5vw;
+}
+.sidenav {
+  width: 200px;
+
+
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.accountButtons{
+  float: right;
+  margin-left:0px;
+  font-family: Calibri;
+  font-size: 1vw;
+  font-weight:600;
+
+  
+}
+
+.spacer{
+  flex: 1 1 auto
+}

@@ -1,0 +1,29 @@
+.note{
+    margin-top: 10px;
+   
+
+    
+}
+
+textarea{
+    background-color: rgb(248, 227, 246);
+    height: 80vh;
+    resize:none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+textarea:focus{
+    background-color: rgb(248, 227, 246);
+}
+
+.save-button{
+    margin-bottom: 10px;
+    background-color: rgb(175, 240, 156);
+}
+
+.title{
+    font-size: 25px;
+    color: rgb(83, 61, 78);
+    font-family: Calibri;
+  }  

@@ -1,0 +1,17 @@
+.submit{
+    background-color: rgb(195, 239, 129);
+}
+.close{
+    background-color: rgb(247, 130, 119);
+}
+
+
+.date{
+    width: 11vw;
+    margin: 0;
+  
+}
+
+mat-form-field-appearance-outline {
+    color: red;
+  }

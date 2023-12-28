@@ -1,0 +1,135 @@
+ 
+   <div class="container">
+    <div class="top">
+      <h1 *ngIf="iD >=1 else default" class="title">Selected Lesson: {{iD}}</h1>
+      <ng-template #default>
+   
+       <h1 class="title">None Selected</h1>
+   
+      </ng-template>
+      <div class="topbar">
+        <button (click) = "onAddItem()" mat-raised-button  class="add-new-button">Add New</button>
+        <button  *ngIf="iD>=1"(click) = "onEditItem()" mat-raised-button  class="add-edit-button">Edit</button>
+        <button  *ngIf="iD>=1"(click) = "onDelete()" mat-raised-button  class="add-edit-button">Delete</button>
+        
+        <!-- <div class="priceTotal">
+          <span>Price</span>
+        </div>
+   -->
+      </div>
+  
+  
+     </div>
+  <div class="table-wrapper">
+    <table class="main-table" mat-table  [dataSource]="dataSource" matSort>
+      <!-- Called a Column Template -->
+      <ng-container matColumnDef="id">
+        <!-- Unique Name -->
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>id</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="date">
+        <!-- Unique Name -->
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Date</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.date  | date:'dd-MM-YYYY'}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="day">
+        <!-- Unique Name -->
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Day</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.day}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="time">
+        <!-- Unique Name -->
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Time</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.time}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="weather">
+        <!-- Unique Name -->
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Weather</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.weather}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="trainingType">
+        <!-- Unique Name -->
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Training Type</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.trainingType}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="topic">
+        <!-- Unique Name -->
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Topic</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.topic}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+  
+  
+  
+      <ng-container matColumnDef="carModel">
+          <!-- Unique Name -->
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Car Model</th>
+          <!-- Header Name -->
+          <td mat-cell *matCellDef="let element">{{ element.carModel }}</td>
+          <!-- Actual Data -->
+        </ng-container>
+  
+        
+      <ng-container matColumnDef="instructor">
+        <!-- Unique Name -->
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Instructor</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.instructor}}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      
+  
+  
+      <ng-container matColumnDef="lessonHours">
+        <!-- Unique Name -->
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hours ({{totalHours}})</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">{{ element.lessonHours }}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <ng-container matColumnDef="cost">
+        <!-- Unique Name -->
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost ({{totalCost}})</th>
+        <!-- Header Name -->
+        <td mat-cell *matCellDef="let element">£{{ element.cost }}</td>
+        <!-- Actual Data -->
+      </ng-container>
+  
+      <tr class="header" mat-header-row *matHeaderRowDef="tableColumns"></tr>
+      <tr #item
+      (click)="onClickRow(row,item)"
+      mat-row
+      *matRowDef="let row; columns: tableColumns"
+      [ngClass]="{'highlight': iD == row.id}"
+    ></tr>
+        
+    </table>
+  
+  </div>
+  
+   </div>
+   

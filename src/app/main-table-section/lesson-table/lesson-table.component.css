@@ -1,0 +1,71 @@
+
+.main-table{
+  background-color: #ffffff;
+
+
+}
+.table-wrapper{
+  max-height: 80vh;
+  overflow: auto;
+}
+th{
+
+  font-size: 17px;
+
+  
+  
+}
+
+.highlight {
+  background-color: rgb(249, 231, 244);
+}
+
+th,td{
+  
+  color: rgb(0, 0, 0);
+
+}
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: rgb(249, 231, 244);
+  font-weight: 500;
+}
+.mat-mdc-row .mat-mdc-cell {
+  
+  cursor: pointer;
+}
+
+.header{
+  background-color:rgb(235, 192, 224);
+  
+}
+
+.top{
+  margin-bottom: 20px;
+  
+}
+
+.top .add-new-button{
+  margin-left: 5px;
+   background-color: rgb(235, 192, 224);
+  color: rgb(0, 0, 0);
+  z-index: 0;
+}
+
+.add-edit-button{
+  z-index: 0;
+
+}
+
+.title{
+  margin-top: 10px;
+  color: rgb(83, 61, 78);
+  font-family: Calibri;
+}
+
+.topbar{
+  display: flex;
+  width: 65vw;
+}
+.priceTotal{
+  float: right;
+}
